@@ -1,9 +1,9 @@
 const express = require("express");
-const bookContentController = require("../controllers/bookContentController");
+const bookContentController = require("../controllers/bookController");
 const router = express.Router();
 
 router.get(
-  "/content/:bookId",
+  "/:bookId",
   bookContentController.getBookContentByBookIDAndContentId
 );
 
