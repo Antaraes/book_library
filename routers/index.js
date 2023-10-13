@@ -1,9 +1,9 @@
-import express from "express";
-
+const express = require("express");
+const data = require("../config/db");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json("Run from main route");
+router.use("/book", (req, res, next) => {
+  res.json(data);
 });
 
-export default router;
+module.exports = router;
