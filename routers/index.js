@@ -1,7 +1,7 @@
 const express = require("express");
-const data = require("../config/db");
-const bookRoute = require("./bookRoute");
+const bookRoutes = require("./bookDetail");
 const router = express.Router();
 
-router.use("/book", bookRoute);
+router.use("/book", bookRoutes);
+
 module.exports = router;
