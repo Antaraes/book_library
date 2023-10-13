@@ -3,7 +3,8 @@ const {
 } = require("../services/progressingService");
 
 const getProgressingBooks = (req, res) => {
-  res.json(fetchProgressingBookByUserId(2));
+  const id = req.params.id;
+  res.json(fetchProgressingBookByUserId(id));
 };
 
 module.exports = {

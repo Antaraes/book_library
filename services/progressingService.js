@@ -1,8 +1,8 @@
 const { progressingBook } = require("../config/db");
 
 function fetchProgressingBookByUserId(id) {
-  console.log(id);
-  return progressingBook.filter((book) => book.userId === id);
+  const books = progressingBook.filter((book) => book.userId === Number(id));
+  return books ? books : [];
 }
 
 module.exports = {
