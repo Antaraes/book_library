@@ -14,3 +14,11 @@ app.use("/api/v1", router);
 app.listen(PORT, () => {
   console.log("Server listening on", PORT);
 });
+
+/* 
+  /booksList 
+  / books / 1 
+  / bookmark /1
+  / user / 1 
+  /wishlist/ 
+*/
