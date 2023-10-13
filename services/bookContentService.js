@@ -11,15 +11,20 @@ const getBookContentById = (req, res) => {
     return;
   }
 
-  const content = data.bookContent.filter(
-    (content) => content.bookId == bookId
-  );
+  const content = data.bookContent.filter((content) => content.bookId == bookId);
+  const bookDetail = data.book.find((book) => book.id == bookId);
 
-  if (!content) {
+  if (!content && !bookDetail) {
     res.status(404).json({ error: "Book content not found" });
     return;
   }
-  return res.status(200).json(content);
+  // const dataList = {
+  //   content: content,
+  //   bookDetail: bookDetail,
+  // };
+  // console.log();
+  console.log(bookDetail);
+  return bookDetail;
 };
 
 module.exports = {
