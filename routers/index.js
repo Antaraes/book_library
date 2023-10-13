@@ -1,7 +1,9 @@
 const express = require("express");
-const bookRoutes = require("./bookRoutes");
+const data = require("../config/db");
 const router = express.Router();
 
-router.use("/book", bookRoutes);
+router.use("/book", (req, res, next) => {
+  res.json(data);
+});
 
 module.exports = router;
