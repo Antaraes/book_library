@@ -1,5 +1,4 @@
 const express = require("express");
-
 const bookRoutes = require("./bookDetail");
 const router = express.Router();
 

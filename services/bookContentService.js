@@ -1,30 +1,32 @@
 const data = require("../config/db");
+const zlib = require("zlib");
 
-const getBookContentById = (req, res) => {
-  const { bookId } = req.params;
-  console.log("bookId------" + bookId);
-
+const getBookContentById = (bookId) => {
   const book = data.book.find((b) => b.id == bookId);
 
   if (!book) {
-    res.status(404).json({ error: "Book not found" });
-    return;
+    return { error: "Cannot Find book" };
   }
 
   const content = data.bookContent.filter((content) => content.bookId == bookId);
   const bookDetail = data.book.find((book) => book.id == bookId);
 
-  if (!content && !bookDetail) {
-    res.status(404).json({ error: "Book content not found" });
-    return;
+  if (content.length === 0) {
+    return { error: "Cannot Find book content" };
   }
-  // const dataList = {
-  //   content: content,
-  //   bookDetail: bookDetail,
-  // };
-  // console.log();
-  console.log(bookDetail);
-  return bookDetail;
+
+  const compressedContent = content.map((entry) => ({
+    id: entry.id,
+    bookId: entry.bookId,
+    content: zlib.deflateSync(JSON.stringify(entry.content)).toString("base64"),
+    page_no: entry.page_no,
+  }));
+  const bookInfoDetail = {
+    book: book,
+    contents: compressedContent,
+  };
+
+  return bookInfoDetail;
 };
 
 module.exports = {
