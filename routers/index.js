@@ -1,9 +1,7 @@
-import express from "express";
-
+const express = require("express");
+const bookRoutes = require("./bookRoutes");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json("Run from main route");
-});
+router.use("/book", bookRoutes);
 
-export default router;
+module.exports = router;
