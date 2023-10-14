@@ -3,7 +3,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const router = require("./routers/index.js");
-
 dotenv.config();
 
 const PORT = process.env.PORT;
