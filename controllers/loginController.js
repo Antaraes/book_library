@@ -1,4 +1,3 @@
-// const LoginService = require("../services/loginService");
 const data = require("../config/db");
 
 exports.getLogoutUser = (req, res) => {
