@@ -1,18 +1,17 @@
 const data = require("../config/db");
 
 exports.getLogoutUser = (req, res) => {
-    const userId = req.params.userId;
-    res.clearCookie("user");
-    res.json({ message: "Logout successful" });
-  };
-  
+  const userId = req.params.userId;
+  res.clearCookie("user");
+  res.json({ message: "Logout successful" });
+};
 
 exports.postLoginUser = (req, res) => {
-  const userName = req.body.userName;
+  const username = req.body.username;
   const password = req.body.password;
 
   const authenticatedUser = data.user.find(
-    (user) => user.username === userName && user.password === password
+    (user) => user.username === username && user.password === password
   );
 
   if (authenticatedUser) {
