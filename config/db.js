@@ -458,13 +458,13 @@ const data = {
       progressingPercent: 0,
     },
     {
-      userId: 1,
+      userId: 2,
       bookId: 2,
       resumePage: 1,
       progressingPercent: 0,
     },
     {
-      userId: 1,
+      userId: 2,
       bookId: 3,
       resumePage: 1,
       progressingPercent: 0,

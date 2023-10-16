@@ -1,16 +1,11 @@
 const express = require("express");
-const bookContentController = require("../controllers/bookController");
+const bookContentController = require("../controllers/book.controller");
 const router = express.Router();
-
-// router.use("/:bookId", (req, res, next) => {
-//   next("/:bookId/:contentId");
-// });
 
 router.get(
   "/:bookId/:currentPage/:contentId",
   bookContentController.getBookContentByBookIDAndContentId
 );
-
 router.get(
   "/:bookId/:currentPage",
   bookContentController.getBookContentByBookIDAndContentId
