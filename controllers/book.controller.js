@@ -1,8 +1,12 @@
 const bookContentService = require("../services/bookContentService");
 
 const getBookContentByBookIDAndContentId = (req, res) => {
-  const { bookId } = req.params;
-  const data = bookContentService.getBookContentById(bookId);
+  const { bookId, currentPage, contentId } = req.params;
+  const data = bookContentService.getBookContentById(
+    bookId,
+    currentPage,
+    contentId
+  );
 
   if (data.error) {
     res.status(404).json({ error: data.error });
