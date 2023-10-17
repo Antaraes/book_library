@@ -8,7 +8,6 @@ function fetchProgressingBookByUserId(id) {
   progressList.forEach((progress) => {
     const progressData = {
       book: book.find((book) => book.id === progress.bookId),
-      bookmark: bookmark.find((book) => book.id === )
       resumePage: progress.resumePage,
       percent: progress.progressingPercent,
     };
