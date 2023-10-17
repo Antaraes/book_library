@@ -418,7 +418,25 @@ const data = {
       userId: 1,
       bookId: 1,
       resumePage: 1,
-      progressingPercent: 0,
+      progressingPercent: 20,
+    },
+    {
+      userId: 1,
+      bookId: 2,
+      resumePage: 1,
+      progressingPercent: 80,
+    },
+    {
+      userId: 1,
+      bookId: 3,
+      resumePage: 1,
+      progressingPercent: 40,
+    },
+    {
+      userId: 1,
+      bookId: 4,
+      resumePage: 1,
+      progressingPercent: 90,
     },
     {
       userId: 2,
