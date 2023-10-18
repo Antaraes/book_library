@@ -16,13 +16,11 @@ function getBookmarksByUserAndBook(bookId, userId) {
         bookContent.page_no === data.book_content_page_no &&
         bookContent.bookId === data.bookId
     );
-    const pages = [];
-    bookContent.forEach((bookContent) => pages.push(bookContent.page_no));
     const bookmarkData = {
       id: data.id,
       bookId: book.id,
       bookTitle: book.title,
-      bookmarkPages: pages,
+      bookmarkPages: bookContent,
     };
     result.push(bookmarkData);
   });
@@ -41,13 +39,11 @@ function getBookmarksByUser(userId) {
         bookContent.page_no === data.book_content_page_no &&
         bookContent.bookId === data.bookId
     );
-    const pages = [];
-    bookContent.forEach((bookContent) => pages.push(bookContent.page_no));
     const bookmarkData = {
       id: data.id,
       bookId: book.id,
       bookTitle: book.title,
-      bookmarkPages: pages,
+      bookmarkPages: bookContent,
     };
     result.push(bookmarkData);
   });
