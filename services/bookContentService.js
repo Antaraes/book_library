@@ -29,9 +29,12 @@ const getBookContentById = (bookId, currentPage, contentId) => {
     return { error: "Current page not found" };
   }
 
-  const pagesToShow = 8;
-  const pagesBefore = 3;
+  const pagesToShow = 10;
+  const isFirstPage = currentPageIndex == 1;
+  const pagesBefore = isFirstPage ? 1 : 3;
+  console.log(pagesBefore);
   const pagesAfter = pagesToShow - pagesBefore - 1;
+  console.log("pageAfter", pagesAfter);
 
   const startPageIndex = Math.max(0, currentPageIndex - pagesBefore);
   const endPageIndex = Math.min(content.length - 1, currentPageIndex + pagesAfter);
@@ -41,7 +44,8 @@ const getBookContentById = (bookId, currentPage, contentId) => {
   const compressedContent = contentInRange.map((entry) => ({
     id: entry.id,
     bookId: entry.bookId,
-    content: zlib.deflateSync(JSON.stringify(entry.content)).toString("base64"),
+    // content: zlib.deflateSync(JSON.stringify(entry.content)).toString("base64"),
+    content: entry.content,
     page_no: entry.page_no,
   }));
 
