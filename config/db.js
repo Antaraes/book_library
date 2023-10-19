@@ -302,6 +302,43 @@ const data = {
       content: "page2",
       page_no: 2,
     },
+
+    {
+      id: 8,
+      bookId: 1,
+      content: "page4",
+      page_no: 4,
+    },
+    {
+      id: 9,
+      bookId: 1,
+      content: "page5",
+      page_no: 5,
+    },
+    {
+      id: 10,
+      bookId: 1,
+      content: "page6",
+      page_no: 6,
+    },
+    {
+      id: 11,
+      bookId: 1,
+      content: "page4",
+      page_no: 7,
+    },
+    {
+      id: 12,
+      bookId: 1,
+      content: "page5",
+      page_no: 8,
+    },
+    {
+      id: 13,
+      bookId: 1,
+      content: "page6",
+      page_no: 9,
+    },
   ],
   user: [
     {
@@ -344,6 +381,18 @@ const data = {
       userId: 3,
       bookId: 3,
       book_content_page_no: 2,
+    },
+    {
+      id: 5,
+      userId: 1,
+      bookId: 1,
+      book_content_page_no: 4,
+    },
+    {
+      id: 6,
+      userId: 1,
+      bookId: 1,
+      book_content_page_no: 8,
     },
   ],
   bookUser: [
@@ -415,18 +464,42 @@ const data = {
   ],
   progressingBook: [
     {
+      id: 1,
       userId: 1,
       bookId: 1,
       resumePage: 1,
-      progressingPercent: 0,
+      progressingPercent: 20,
     },
     {
+      id: 2,
+      userId: 1,
+      bookId: 2,
+      resumePage: 1,
+      progressingPercent: 80,
+    },
+    {
+      id: 3,
+      userId: 1,
+      bookId: 3,
+      resumePage: 1,
+      progressingPercent: 40,
+    },
+    {
+      id: 4,
+      userId: 1,
+      bookId: 4,
+      resumePage: 1,
+      progressingPercent: 90,
+    },
+    {
+      id: 5,
       userId: 2,
       bookId: 2,
       resumePage: 1,
       progressingPercent: 0,
     },
     {
+      id: 6,
       userId: 2,
       bookId: 3,
       resumePage: 1,
