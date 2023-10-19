@@ -12,7 +12,7 @@ const { authenticatedUser } = require("../middleware/auth.middleware");
 router.get("/authors", authorController.getAuthor);
 router.get("/categories", categoriesController.getCategories);
 router.use("/booksList", bookListRoute);
-router.use("/book", authenticatedUser, bookRoutes);
+router.use("/book", bookRoutes);
 router.use("/auth", authRoutes);
 router.use("/bookmark", authenticatedUser, bookmarkRoutes);
 
