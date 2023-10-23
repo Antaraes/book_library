@@ -1,27 +1,45 @@
 const data = require("../config/db");
-
-exports.getLogoutUser = (req, res) => {
+const supabase = require("../config/supabase");
+exports.getLogoutUser = async (req, res) => {
   const userId = req.params.userId;
-  res.clearCookie("user");
-  res.json({ message: "Logout successful" });
+  const { error } = await supabase.auth.signOut();
+
+  if (!error) {
+    res.json({ message: "Logout successful" });
+  }
+  res.json({ message: error });
 };
 
-exports.postLoginUser = (req, res) => {
-  const username = req.body.username;
+exports.loginUser = async (req, res) => {
+  const email = req.body.email;
   const password = req.body.password;
 
-  const authenticatedUser = data.user.find(
-    (user) => user.username === username && user.password === password
-  );
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email,
+    password: password,
+  });
 
-  if (authenticatedUser) {
-    try {
-      res.cookie("user", authenticatedUser, { secure: true });
-      res.json({ message: "login successful", user: authenticatedUser });
-    } catch (err) {
-      res.json("Error setting cookie: " + err.message);
-    }
+  if (data) {
+    res.cookie("user", data.session.access_token, { secure: true });
+    res.json({ message: "login successful", data: data });
+    return;
   } else {
-    res.json("Login Failed");
+    res.json({ message: error });
+  }
+};
+exports.registerUser = async (res, req) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  const { user, session, error } = await supabase.auth.signUp({
+    email: email,
+    password: password,
+  });
+
+  try {
+    // res.cookie("user", user, { secure: true });
+    res.json({ message: "login successful", user: user, session: session });
+  } catch (err) {
+    res.json("Error setting cookie: " + error);
   }
 };
