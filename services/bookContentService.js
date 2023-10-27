@@ -51,7 +51,7 @@ const getBookContentById = (bookId, currentPage, contentId) => {
 
   const bookInfoDetail = {
     book: book,
-    contents: compressedContent,
+    contents: content,
   };
 
   return bookInfoDetail;
