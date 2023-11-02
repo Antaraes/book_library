@@ -235,35 +235,33 @@ const data = {
   author: [
     {
       id: 1,
-      name: "သော်တာမင်း2",
+      name: "Mya Than Tint",
       description:
-        "1မြန်မာ့သမိုင်းတွင် ခရစ်နှစ် ၁၃၆၄ ခုနှစ်မှ ၁၇၅၁ ခုနှစ်အထိ နှစ် ၄ဝဝ နီးပါး သက်တမ်းရှည်ကြာခဲ့ပြီး မင်းနေပြည်တော် လေးကြိမ်ဖြစ်ခဲ့သည့် အင်းဝ သည် ပြည်တွင်းပြည်ပ၌ အထူးထင်ရှားသော သမိုင်းဝင်မြို့ဟောင်းတစ်ခုဖြစ်သည်။ အနောက် နိုင်ငံသားများက ပထမမြန်မာနိုင်ငံတော်(ပုဂံ ခေတ်)ကို Kingdom of Pagan ဟုလည်း ကောင်း၊ ဒုတိယမြန်မာနိုင်ငံတော်(တောင်ငူ ခေတ်)ကို Kingdom of Pegu ဟု လည်း ကောင်း၊ တတိယမြန်မာနိုင်ငံတော်(ကုန်းဘောင် ခေတ်)ကို Kingdom of Ava, Court of Ava ဟု လည်းကောင်း ရေးသားလေ့ရှိခဲ့ပြီး အင်းဝဖြစ်စေ၊ အမရပူရဖြစ်စေ နေပြည်တော်ကို အင်းဝ(Ava)ဟုသာ မှတ်တမ်းပြုခဲ့ကြသည်။",
+        "Rangoon University in 1948, the year Burma gained independence from Great Britain, and received a degree in philosophy, political",
     },
     {
       id: 2,
-      name: "သော်တာမင်း1",
-      description:
-        "2မြန်မာ့သမိုင်းတွင် ခရစ်နှစ် ၁၃၆၄ ခုနှစ်မှ ၁၇၅၁ ခုနှစ်အထိ နှစ် ၄ဝဝ နီးပါး သက်တမ်းရှည်ကြာခဲ့ပြီး မင်းနေပြည်တော် လေးကြိမ်ဖြစ်ခဲ့သည့် အင်းဝ သည် ပြည်တွင်းပြည်ပ၌ အထူးထင်ရှားသော သမိုင်းဝင်မြို့ဟောင်းတစ်ခုဖြစ်သည်။ အနောက် နိုင်ငံသားများက ပထမမြန်မာနိုင်ငံတော်(ပုဂံ ခေတ်)ကို Kingdom of Pagan ဟုလည်း ကောင်း၊ ဒုတိယမြန်မာနိုင်ငံတော်(တောင်ငူ ခေတ်)ကို Kingdom of Pegu ဟု လည်း ကောင်း၊ တတိယမြန်မာနိုင်ငံတော်(ကုန်းဘောင် ခေတ်)ကို Kingdom of Ava, Court of Ava ဟု လည်းကောင်း ရေးသားလေ့ရှိခဲ့ပြီး အင်းဝဖြစ်စေ၊ အမရပူရဖြစ်စေ နေပြည်တော်ကို အင်းဝ(Ava)ဟုသာ မှတ်တမ်းပြုခဲ့ကြသည်။",
+      name: "Ludu U Hla",
+      bio: "Ludu U Hla was a Burmese journalist, publisher, chronicler, folklorist and social reformer whose prolific writings include a considerable number of path-breaking nonfiction works. He was married to fellow writer and journalist Ludu Daw Amar.",
     },
     {
       id: 3,
       name: "သော်တာမင်း3",
-      description:
-        "3မြန်မာ့သမိုင်းတွင် ခရစ်နှစ် ၁၃၆၄ ခုနှစ်မှ ၁၇၅၁ ခုနှစ်အထိ နှစ် ၄ဝဝ နီးပါး သက်တမ်းရှည်ကြာခဲ့ပြီး မင်းနေပြည်တော် လေးကြိမ်ဖြစ်ခဲ့သည့် အင်းဝ သည် ပြည်တွင်းပြည်ပ၌ အထူးထင်ရှားသော သမိုင်းဝင်မြို့ဟောင်းတစ်ခုဖြစ်သည်။ အနောက် နိုင်ငံသားများက ပထမမြန်မာနိုင်ငံတော်(ပုဂံ ခေတ်)ကို Kingdom of Pagan ဟုလည်း ကောင်း၊ ဒုတိယမြန်မာနိုင်ငံတော်(တောင်ငူ ခေတ်)ကို Kingdom of Pegu ဟု လည်း ကောင်း၊ တတိယမြန်မာနိုင်ငံတော်(ကုန်းဘောင် ခေတ်)ကို Kingdom of Ava, Court of Ava ဟု လည်းကောင်း ရေးသားလေ့ရှိခဲ့ပြီး အင်းဝဖြစ်စေ၊ အမရပူရဖြစ်စေ နေပြည်တော်ကို အင်းဝ(Ava)ဟုသာ မှတ်တမ်းပြုခဲ့ကြသည်။",
+      bio: "3မြန်မာ့သမိုင်းတွင် ",
     },
   ],
   categories: [
     {
       id: 1,
-      name: "Mike tl",
+      name: "Mystery",
     },
     {
       id: 2,
-      name: "wow",
+      name: "Biography",
     },
     {
       id: 3,
-      name: "omg",
+      name: "Novella",
     },
   ],
   bookContent: [
@@ -1344,43 +1342,9 @@ const data = {
       authId: 1,
       cateId: 1,
     },
+
     {
       bookId: 3,
-      authId: 1,
-      cateId: 1,
-    },
-    {
-      bookId: 4,
-      authId: 2,
-      cateId: 2,
-    },
-    {
-      bookId: 5,
-      authId: 2,
-      cateId: 2,
-    },
-    {
-      bookId: 6,
-      authId: 2,
-      cateId: 2,
-    },
-    {
-      bookId: 7,
-      authId: 3,
-      cateId: 3,
-    },
-    {
-      bookId: 8,
-      authId: 3,
-      cateId: 3,
-    },
-    {
-      bookId: 9,
-      authId: 3,
-      cateId: 3,
-    },
-    {
-      bookId: 33,
       authId: 3,
       cateId: 3,
     },

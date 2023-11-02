@@ -44,14 +44,14 @@ const getBookContentById = (bookId, currentPage, contentId) => {
   const compressedContent = contentInRange.map((entry) => ({
     id: entry.id,
     bookId: entry.bookId,
-    // content: zlib.deflateSync(JSON.stringify(entry.content)).toString("base64"),
-    content: entry.content,
+    content: zlib.deflateSync(JSON.stringify(entry.content)).toString("base64"),
+    // content: entry.content,
     page_no: entry.page_no,
   }));
 
   const bookInfoDetail = {
     book: book,
-    contents: content,
+    contents: compressedContent,
   };
 
   return bookInfoDetail;

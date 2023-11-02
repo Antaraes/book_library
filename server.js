@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const router = require("./routers/index.js");
+const supabase = require("./config/supabase.js");
 const cookieParser = require("cookie-parser");
 dotenv.config();
 
@@ -23,7 +24,31 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1", router);
-app.listen(PORT, function () {
+
+// const dataInsert = async () => {
+//   const datas = [
+//     {
+//       bookId: 1,
+//       authId: 2,
+//       cateId: 1,
+//     },
+//     {
+//       bookId: 2,
+//       authId: 2,
+//       cateId: 1,
+//     },
+
+//     {
+//       bookId: 3,
+//       authId: 3,
+//       cateId: 3,
+//     },
+//   ];
+//   const { data, error } = await supabase.from("BookList").insert(datas);
+// };
+// dataInsert();
+
+app.listen(PORT, async () => {
   console.log("Server listening on", PORT);
 });
 

@@ -27,7 +27,7 @@ exports.loginUser = async (req, res) => {
     res.json({ message: error });
   }
 };
-exports.registerUser = async (res, req) => {
+exports.registerUser = async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
@@ -37,8 +37,8 @@ exports.registerUser = async (res, req) => {
   });
 
   try {
-    // res.cookie("user", user, { secure: true });
-    res.json({ message: "login successful", user: user, session: session });
+    res.cookie("user", user, { secure: true });
+    res.json({ message: "Account successfully created", user: user, session: session });
   } catch (err) {
     res.json("Error setting cookie: " + error);
   }
