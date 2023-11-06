@@ -17,6 +17,7 @@ const booksWithDetails = async () => {
   bookId,
   Book (
     title,
+    image,
     published,
     totalPage
   ),
